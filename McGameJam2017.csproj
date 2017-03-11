@@ -75,8 +75,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DebritController.cs" />
     <Compile Include="Assets\GroundCheck.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\Resources\PlayerController.cs" />
+    <Compile Include="Assets\Salle.cs" />
+    <Compile Include="Assets\main.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
