@@ -12,6 +12,7 @@ public class main : MonoBehaviour {
     private Object joueur;
     private Object debris;
 
+
     void Start ()
 	{
         joueur = Resources.Load("Joueur");
@@ -38,12 +39,13 @@ public class main : MonoBehaviour {
                                                            360 * Random.value,
                                                            360 * Random.value));
 
-        Instantiate (debris, position, rotation);
-	}
+        GameObject Debris = Instantiate (debris, position, rotation)as GameObject;
+        Destroy(Debris, 3f);
+
+    }
 
     // Update is called once per frame
     void Update () {
-		
 	}
 }
 
