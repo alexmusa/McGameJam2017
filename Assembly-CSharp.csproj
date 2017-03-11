@@ -46,8 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerController.cs" />
-     <Compile Include="Assets\Quake.cs" />
+     <Compile Include="Assets\GroundCheck.cs" />
+     <Compile Include="Assets\Resources\PlayerController.cs" />
+     <Compile Include="Assets\Salle.cs" />
+     <Compile Include="Assets\main.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
