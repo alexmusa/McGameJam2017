@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Salle : MonoBehaviour {
+	
+	float timeSinceLastQuake;
 
 	// Use this for initialization
 	void Start () {
-		
+		timeSinceLastQuake = 0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		timeSinceLastQuake += Time.deltaTime;
+		if (timeSinceLastQuake > 5f) {
+			timeSinceLastQuake = 0f;
+			StartCoroutine(Shake(1.0f, 3.0f));
+		}
 	}
-
-    void Quake(float[] parameters)
-    {
-        StartCoroutine(Shake(parameters[0], parameters[1]));
-    }
 
 	IEnumerator Shake(float magnitude, float duration) {
 
@@ -37,7 +38,7 @@ public class Salle : MonoBehaviour {
 
 			// map value to [-1, 1]
 			float x = Mathf.PerlinNoise(Time.time * scale, 0.0f) * 2.0f - 1.0f;
-            float y = Mathf.PerlinNoise(Time.time * scale, Time.time * scale) * 2.0f - 1.0f;
+            float y = Mathf.PerlinNoise(0.0f, Time.time * scale) * 2.0f - 1.0f;
             float z = Mathf.PerlinNoise(0.0f, Time.time * scale) * 2.0f - 1.0f;
 			x *= magnitude * damper;
             y *= magnitude * damper * 0.5f;
