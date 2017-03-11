@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DebritController.cs" />
      <Compile Include="Assets\GroundCheck.cs" />
      <Compile Include="Assets\Resources\PlayerController.cs" />
      <Compile Include="Assets\Salle.cs" />
